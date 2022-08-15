@@ -13,11 +13,11 @@ phases:
     commands:                               
       - echo Build started on `date`
       - echo Building java
-      - cd auth-service-ecr
+      - cd auth-service
       - mvn clean package
       - echo Building the docker image
-      - docker build -t auth-service-ecr
-      - docker tag auth-service-ecr public.ecr.aws/p7x5b9x2/auth-service-ecr
+      - docker build -t auth-service
+      - docker tag auth-service public.ecr.aws/p7x5b9x2/auth-service-ecr
   post_build:
     commands:
       - echo Build completed on `date`   
