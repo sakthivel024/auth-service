@@ -13,7 +13,6 @@ phases:
     commands:                               
       - echo Build started on `date`
       - echo Building java
-      - cd auth-service
       - mvn clean package
       - echo Building the docker image
       - docker build -t auth-service
